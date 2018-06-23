@@ -1,0 +1,219 @@
+.dashboard{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.dashboard .header{
+    background-color: #404142;
+    color: #fff;
+    padding: 0 20px;
+    height: 50px;
+}
+
+.dashboard .centerDiv{
+    text-align: center;
+    padding-top: 15px;
+}
+
+.dashboard .userInfo{
+    padding: 15px 0 0 0;
+    text-transform: capitalize;
+    text-align: right;
+}
+
+.dashboard .addExpense{
+    padding: 20px;
+    border-bottom: 1px solid #d5d6d9;
+}
+
+.expenseList{
+    padding: 20px;
+}
+
+.expenseList .list{
+    padding: 0;
+}   
+
+.expenseList .list li{
+    float: left;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    margin: 0 20px 20px 0;
+    border: 1px solid #d5d6d9;
+    border-radius: 4px;
+    background-color: #ffedb5;
+    cursor: pointer;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+.expenseList .list li p {
+    padding-top: 5px;
+}
+
+.expenseList .list li:hover{
+    background-color: #f7e19b;
+}
+
+.dailyExpense{
+    padding: 20px;
+}
+
+.dailyExpense table{
+    width: 100%;
+    border: 1px solid #d5d6d9;
+    display: block;
+}
+
+.dailyExpense table thead{
+    background: #d5d6d9;
+    display: inline-block;
+    width: 100%;
+}
+
+.dailyExpense table thead th{
+    padding: 10px;
+    font-size: 14px;
+    width: 33.3%;
+    display: inline-block;
+}
+
+.dailyExpense table tbody{
+    display: block;
+    height: calc(100vh - 305px);
+    overflow-y: auto;
+}
+
+.dailyExpense table tbody tr{
+    width: 100%;
+    display: block;
+}
+
+.dailyExpense table tbody td{
+    padding: 10px;
+    border-bottom: 1px solid #d5d6d9;
+    font-size: 12px;
+    width: 33.3%;
+    display: inline-block;
+}
+
+.dashboard .back{
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+/* Modal animation styles  */
+
+.modal-window-overlay{
+    position: absolute;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.7); 
+}
+
+.modal-animation-enter.modal-window .modal-window-overlay{
+    background: rgba(0,0,0,0);
+}
+
+.modal-animation-enter.modal-animation-enter-active.modal-window .modal-window-overlay{
+    background: rgba(0,0,0,0.7);
+    transition: 0.5s;
+}
+
+.modal-animation-leave.modal-window-overlay{
+    background: rgba(0,0,0,0.7);
+}
+
+.modal-animation-leave.modal-animation-leave-active.modal-window .modal-window-overlay{
+    background: rgba(0,0,0,0);
+    transition: 0.5s;
+}
+
+.addExpenseForm{
+    position: absolute;
+    width: 300px;
+    left: calc(50% - 150px);
+    background: #fff;
+    border: 1px solid #d5d6d9;
+    border-radius: 4px;
+    opacity: 1;
+    transform: translate3d(0, 100px, 0);
+}
+
+.addExpenseForm .header{
+    padding: 10px;
+    background: #fff;
+    color: #000;
+    text-align: center;
+    border-bottom: 1px solid #d5d6d9;
+    height: auto;
+}
+
+.modal-animation-enter.modal-window .addExpenseForm{
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+}
+
+.modal-animation-enter.modal-animation-enter-active.modal-window .addExpenseForm{
+    opacity: 1;
+    transform: translate3d(0, 100px, 0);
+    transition: 0.5s;
+}
+
+.modal-animation-leave.modal-window .addExpenseForm{
+    opacity: 1;
+    transform: translate3d(0, 100px, 0);
+}
+
+.modal-animation-leave.modal-animation-leave-active.modal-window .addExpenseForm{
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+    transition: 0.5s;
+}
+
+.addExpenseForm .expenseForm{
+    padding: 10px;
+}
+
+.addExpenseForm .action{
+    margin-top: 20px;
+}
+
+.react-datepicker-wrapper{
+    width: 100%;
+}
+
+.react-datepicker__input-container, .react-datepicker__input-container input{
+    width: 100%;
+    height: 35px;
+}
+.react-datepicker__input-container input{
+    border-radius: 5px;
+    border: 1px solid #d5d6d9;
+    box-shadow: none;
+}
+
+.monthDisplay{
+    height: 35px;
+    border: 1px solid #d5d6d9;
+    border-radius: 4px;
+    padding: 6px;
+}
+
+.monthly-expense-highlight{
+    margin: -10px 0 20px 0;
+}
+
+.monthly-expense-highlight .table-header{
+    text-align: center;
+    font-size: 16px;
+}
+
+.monthly-expense-highlight .amounts > span:last-child{
+    padding-left: 20px;
+}
+
